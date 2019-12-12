@@ -1,0 +1,50 @@
+- id: TfRtM8qPxk0
+  date: 2018-05-05
+  title: Improving extensibility of SignUpModal and LogInModal
+  type: edited
+  version: beta7
+- id: Ouc8Uq9wUJg
+  date: 2018-05-25
+  title: Custom pages that open modals and discussion composer
+  type: edited
+  version: beta7
+- id: vcWBR4rFyb8
+  date: 2019-08-28
+  title: Generating fake data (live stream pilot)
+  type: live
+  version: beta9
+- id: uc-itrO-nug
+  date: 2019-09-05
+  title: Post time edit modal
+  type: live
+  version: beta9
+- id: Vz7aRFRSsO0
+  date: 2019-09-19
+  title: Poke extension
+  type: live
+  version: beta9
+- id: vEv-qcnpgo8
+  date: 2019-09-26
+  title: Birthday extension
+  type: live
+  version: beta10
+- id: v89ro_sO0nU
+  date: 2019-10-19
+  title: Post author edit
+  type: live
+  version: beta10
+- id: qzqHpITyu5k
+  date: 2019-10-24
+  title: '"Good first issue" core PR'
+  type: live
+  version: beta10
+- id: 2Z9t-K0kEm4
+  date: 2019-10-31
+  title: Spooky extension
+  type: live
+  version: beta10
+- id: zQAtVo88Y4I
+  date: 2019-11-28
+  title: Ratings extension
+  type: live
+  version: beta11

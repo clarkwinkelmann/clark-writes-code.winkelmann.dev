@@ -1,0 +1,84 @@
+---
+---
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <title>Clark writes code</title>
+    <meta name="description" content="My videos about programming. learn to create Flarum extensions.">
+    <style>
+        body {
+            background: #e8dfd8;
+        }
+        .post-thumbnail {
+            display: block;
+            position: relative;
+            overflow: hidden;
+            border-radius: 0.25rem 0.25rem 0 0;
+        }
+
+        .post-thumbnail::after {
+             padding-top: 56.25%; /* 16:9 ratio */
+             display: block;
+             content: '';
+         }
+
+        .post-thumbnail:hover {
+             filter: brightness(80%);
+         }
+
+        .post-thumbnail img {
+            position: absolute;
+            width: 100%;
+            left: 0;
+            top: 50%;
+            transform: translateY(-50%);
+        }
+    </style>
+</head>
+<body>
+<div class="container">
+    <h1>Clark writes code</h1>
+
+    <p><a href="https://www.youtube.com/channel/UCc7SyfF1ioDP2QwYGe0S-pg">Clark writes code</a> is my YouTube channel about programming. I currently live stream Flarum extension development sessions.</p>
+
+    <p>You can support this work on <a href="https://www.patreon.com/clark_writes_code">Patreon</a></p>
+
+    <div class="row">
+        {% assign videos = site.data.videos | reverse %}
+        {% for video in videos %}
+        <div class="col-lg-4">
+            <article class="card mb-3">
+                <a class="post-thumbnail" href="https://www.youtube.com/watch?v={{ video.id }}">
+                    <img class="card-img-top" src="https://img.youtube.com/vi/{{ video.id }}/0.jpg" alt="Miniature vidéo">
+                </a>
+                <div class="card-body">
+                    <p class="card-text text-muted">
+                        {% if video.type == 'live' %}
+                        Live stream replay
+                        {% else %}
+                        Video
+                        {% endif %}
+                        |
+                        {{ video.date | date: "%-d %b %Y" }}
+                    </p>
+
+                    <h5 class="card-title"><a href="https://www.youtube.com/watch?v={{ video.id }}">{{ video.title | escape }}</a></h5>
+
+                    <p class="card-text text-muted">
+                        Flarum {{ video.version }}
+                        {% if video.version == 'beta7' %}(backend now outdated){% endif %}
+                        {% if video.version == 'beta9' %}(still relevant){% endif %}
+                        {% if video.version == 'beta10' %}(still relevant){% endif %}
+                    </p>
+                </div>
+            </article>
+        </div>
+        {% cycle '', '', '</div><div class="row">' %}
+        {% endfor %}
+    </div>
+</div>
+</body>
+</html>
